@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "a1515355-e197-4939-b563-03788c40aef7",
+		"name": "ReportingAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add_Job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"summary\":\"sample summ\",\n    \"description\":\"sample desc\",\n    \"firstName\":\"Kiruthika Devi\",\n    \"lastName\":\"Gnanaprakash\",\n    \"status\":\"Open\",\n    \"propertyName\":\"Flat 01, St Johns Street, Manchester, UK, M5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add_job",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add_job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get JobList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/job",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"job"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
