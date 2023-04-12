@@ -2,9 +2,11 @@
 
 Getting Started
 
-Install MySQL and update the server details in config/packages/doctrine.yaml
+Install MySQL and MySQL workbench 
 
-Install MySQL workbench create a schema/database named 'reporting' and execute the following SQLs to create the Tables
+Create a schema/database named 'reporting' 
+
+Execute the following SQLs to create the Tables. These were created through migrations during development
 
 CREATE TABLE `property` (`id` int(11) NOT NULL AUTO_INCREMENT,`name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -20,6 +22,8 @@ CREATE TABLE `job` (
   KEY `IDX_FBD8E0F8549213EC` (`property_id`),
   CONSTRAINT `FK_FBD8E0F8549213EC` FOREIGN KEY (`property_id`) REFERENCES `property` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+Update the DB server details in config/packages/doctrine.yaml
 
 Install Symfony 6 if not already installed
 
